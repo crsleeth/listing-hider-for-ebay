@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <style>
+    body { font: 13px/1.4 system-ui, sans-serif; width: 320px; margin: 0; padding: 12px 14px; color: #222; }
+    h1 { font-size: 15px; margin: 0 0 10px; }
+    label { font-weight: 600; display: block; margin: 12px 0 4px; }
+    .hint { color: #666; font-weight: 400; font-size: 12px; }
+    textarea { width: 100%; box-sizing: border-box; height: 90px; font: 12px/1.4 ui-monospace, monospace; padding: 6px; }
+    .row { display: flex; justify-content: space-between; align-items: center; margin-top: 12px; }
+    button { font: inherit; padding: 5px 10px; cursor: pointer; }
+    #saved { color: #2a7; font-size: 12px; opacity: 0; transition: opacity .2s; }
+    #saved.on { opacity: 1; }
+  </style>
+</head>
+<body>
+  <h1>Listing Hider for eBay</h1>
+
+  <label for="keywords">Hide listings containing <span class="hint">(one per line)</span></label>
+  <textarea id="keywords" placeholder="dent&#10;scratch&#10;crack&#10;for parts"></textarea>
+
+  <label for="sellers">Blocked sellers <span class="hint">(one per line)</span></label>
+  <textarea id="sellers"></textarea>
+
+  <label><input type="checkbox" id="showHidden"> Show hidden listings (faded)</label>
+
+  <div class="row">
+    <span><b id="count">0</b> listings hidden by hand</span>
+    <button id="clear" type="button">Unhide all</button>
+  </div>
+
+  <div class="row">
+    <span id="saved">Saved</span>
+    <button id="save" type="button">Save</button>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

@@ -1,0 +1,8 @@
+.DS_Store
+dist/
+*.zip
+*.xpi
+
+# Local-only files
+build.sh
+*.local.md
